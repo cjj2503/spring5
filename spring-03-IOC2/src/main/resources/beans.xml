@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--使用Spring来创建对象，在Spring这些都称为Bean
+    类型 变量名 = new 类型();
+    Hello hello = new Hello();
+    id = 变量名
+    class = new的对象
+    property 相当于给对象中的属性设置一个值，符合K-V规则！！！
+        -->
+    <!--<bean id="user" class="pojo.User">
+        <property name="name" value="CJJ"/>
+    </bean>-->
+   <!-- constructor-arg：通过构造函数注入-->
+    <!--IOC创建对象的方式-->
+    <!--1、下标赋值-->
+    <!--<bean id="user" class="pojo.User">
+        &lt;!&ndash;index:0表示第一个参数，1表示第二个参数，以此类推&ndash;&gt;
+        <constructor-arg index="0" value="Java"/>
+        <constructor-arg index="1" value="520"/>
+    </bean>-->
+    <!--2、通过类型的创建，不建议使用-->
+    <!--<bean id="user" class="pojo.User">
+        <constructor-arg type="java.lang.String" value="java"/>
+        <constructor-arg type="java.lang.String" value="123"/>
+    </bean>-->
+    <!--3、直接通过参数名来设置-->
+    <bean id="user" class="pojo.User">
+        <constructor-arg name="name" value="CJJ"/>
+        <constructor-arg name="id" value="1625"/>
+    </bean>
+
+
+
+
+</beans>

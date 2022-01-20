@@ -1,0 +1,15 @@
+# 项目排除路径
+/spring-01-IOC1/target/
+/spring-02-HelloSpring/target/
+/spring-03-IOC2/target/
+/spring-04-alias/target/
+/spring-05-DI/target/
+/spring-06-Autowired/target/
+/spring-07-Annotation/target/
+/spring-08-JavaConfig/target/
+/spring-09-Proxy1/target/
+/spring-11-AOP1/target/
+/spring-12-AOP2/target/
+/spring-13-mybatis1/target/
+/spring-14-mybatis2/target/
+/spring-15-transaction/target/

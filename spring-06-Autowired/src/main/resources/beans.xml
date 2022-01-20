@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+    <!--开启注解的支持    -->
+    <context:annotation-config/>
+
+    <bean id="cat1" class="pojo.Cat"/>
+    <bean id="dog1" class="pojo.Dog"/>
+    <bean id="people" class="pojo.People"/>
+
+   <!-- <bean id="people" class="pojo.People">
+        <property name="name" value="CJJ"/>
+        <property name="cat" ref="cat"/>
+        <property name="dog" ref="dog"/>
+    </bean>-->
+    <!--
+    1、byName：会自动在容器上下文中查找，和自己对象set方法后面的值对应的bean id！
+        -->
+    <!--<bean id="people" class="pojo.People" autowire="byName">
+        <property name="name" value="CJJ"/>
+    </bean>-->
+
+    <!--
+    2、byType：会自动在容器上下文中查找，和自己对象属性类型相同的bean！
+        -->
+    <!--<bean id="people" class="pojo.People" autowire="byType">
+        <property name="name" value="JJC"/>
+    </bean>-->
+    <!--ByName的时候，需要保证所有bean的id唯一，并且这个bean需要和自动注入的属性的set方法的值一致！
+        ByType的时候，需要保证所有bean的class唯一，并且这个bean需要和自动注入的属性的类型一致！-->
+</beans>
